@@ -9,12 +9,28 @@
     */
 
     //Entrada
-
+    const quantos = Number(prompt(`Quantos iPhones foram vendidos?`));
+    let faturadoPix = 0;
+    let faturadoCredico = 0;
+    let pix = 0;
+    let credito = 0;
 
     //Processamento
-
+    for (let index = 1; index <= quantos; index++) {
+        const preco = Number(prompt(`Qual o preço do iPhone?`));
+        const forma = prompt(`Qual foi a forma de pagamento?( C-Cartão de Crédito - P-Pix)`).toUpperCase();
+        if(forma === "C"){
+            credito++
+            faturadoCredico = faturadoCredico + preco
+        }
+        else if(forma === "P") {
+            pix++
+            faturadoPix = faturadoPix + preco
+        }
+    }
 
     //Saída
+    alert(`O faturamento de pagamento feito com pix foi R$${faturadoPix.toFixed(2)}, o total de vendas foi ${pix} e o faturamento de pagamento feito com credito foi R$${faturadoCredico.toFixed(2)}, o total de vendas foi ${credito}. `);
 
     /*
     Exemplo:

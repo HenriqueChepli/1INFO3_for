@@ -8,12 +8,23 @@
     */
 
     //Entrada
-
+    let listaPredios = ["Bloco A", "Bloco B", "Bloco C", "Bloco D", "Bloco E"];
+    let novo = [];
+    let antigo = [];
 
     //Processamento
-
+    for (const bloco of listaPredios) {
+        const pablo = prompt(`O ${bloco} é novo ou antigo?? (N - Novo, A - Antigo)`).toUpperCase();
+        if(pablo === "N"){
+            novo.push(bloco);
+        }
+        else if(pablo === "A"){
+            antigo.push(bloco);
+        }
+    }
 
     //Saída
+    alert(`Você disse que os blocos ${novo} são novos, e os blocos ${antigo} são antigos.`);
 
     /*
     Blocos novos: Bloco B, Bloco D, Bloco E

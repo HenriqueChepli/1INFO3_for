@@ -6,12 +6,24 @@
     */
 
     //Entrada
-
+    const notas = Number(prompt(`Quantas notas o aluno obteve no trimestre?`));
+    let arrayNotas = [];
+    let total = 0;
 
     //Processamento
+    for (let index = 1; index <= notas; index++) {
+        const totalNotas = Number(prompt(`Qual foi a nota que o aluno tirou?`));
+        arrayNotas.push(totalNotas)
+        total = totalNotas + total
+    }
 
+    arrayNotas.sort((a, b) => a - b);
+
+
+    
 
     //Saída
+    alert(`As notas foram ${arrayNotas}, a media sendo ${(total / notas)}, a mais alta sendo ${arrayNotas[arrayNotas.length - 1]}, e a mais baixa sendo ${arrayNotas[0]}.`);
     /*
     Exemplo:
     Notas: 4

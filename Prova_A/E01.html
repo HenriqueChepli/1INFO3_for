@@ -6,13 +6,16 @@
     */
 
     //Entrada
-
+    const num = Number(prompt(`Insira um numero inteiro positivo:`));
+    let todos = [];
 
     //Processamento
-
+    for (let index = num; index >= 0; index--) {
+        todos.push(index)
+    }
 
     //Saída
-    
+    alert(todos);
 
     /*
     Exemplo: Usuário informou o número 5
